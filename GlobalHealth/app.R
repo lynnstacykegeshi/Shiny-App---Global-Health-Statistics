@@ -39,6 +39,9 @@ ui <- fluidPage(
   titlePanel("Global Health Statistics"),
   sidebarLayout(
     sidebarPanel(
+      h3("Dataset Overview"),
+      p("This dataset provides comprehensive statistics on global health, focusing on various diseases, treatments, and outcomes. The data spans multiple countries and years, offering valuable insights for health research, epidemiology studies, and machine learning applications."),
+      h4("Dataset Use Cases:"),
       selectizeInput("Country", "Choose a country", choices = c("All", unique(globalhealth_stat$Country))),
       sliderInput("Year", "Select Year",
                   min = min(aggregated_data$Year),
