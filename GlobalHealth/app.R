@@ -27,11 +27,12 @@ merged_data <- world_map %>%
 
 # Define color palette
 palette <- colorBin(
-  palette = c("gray", "yellow", "orange", "red", "darkred"),
+  palette = c("gray", "yellow", "orange", "red", "purple", "darkred"),
   domain = merged_data$Population.Affected,
-  bins = c(0, 100000, 200000, 300000, 400000, 500000, 1000000),
-  na.color = "gray"
+  bins = c(0, 930000000, 960000000, 990000000, 1020000000, 1050000000, 1080000000),
+  na.color = "white"
 )
+
 
 # Define UI
 ui <- fluidPage(
